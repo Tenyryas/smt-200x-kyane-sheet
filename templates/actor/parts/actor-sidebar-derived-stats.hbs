@@ -1,0 +1,63 @@
+<div class="flexrow grid-2col derived-gap">
+
+    <div class="derived-stat rectangle">
+        <label for="system.dodgetn" class="derived-stat-text">Dodge TN</label>
+        <span class="dodge-roll clickable derived-stat-span">{{system.dodgetn}}%</span>
+    </div>
+
+    <div class="derived-stat rectangle">
+        <span class="talk-roll clickable derived-stat-span">{{system.talktn}}%</span>
+        <label for="system.talktn" class="derived-stat-text">Talk TN</label>
+    </div>
+
+    <div class="derived-stat rectangle rectangle2">
+        <label for="system.meleePower" class="derived-stat-text">Melee</label>
+        <span class="melee-power-roll clickable derived-stat-span">{{system.meleePower}}</span>
+        <div class="flexrow flex-group-center grid-span-2 derived-stat-text derived-bonus-dice">
+            +&nbsp;
+            <input type="text" name="system.powerDice.melee" value="{{system.powerDice.melee}}"
+                data-dtype="Number" />&nbsp;d10
+        </div>
+    </div>
+
+    <div class="derived-stat rectangle rectangle2">
+        <span class="ranged-power-roll clickable derived-stat-span">{{system.rangedPower}}
+        </span>
+        <label for="system.rangedPower" class="derived-stat-text derived-stat-ranged">Ranged</label>
+        <div class="flexrow flex-group-center grid-span-2 derived-stat-text derived-bonus-dice">
+            +&nbsp;
+            <input type="text" name="system.powerDice.ranged" value="{{system.powerDice.ranged}}"
+                data-dtype="Number" />&nbsp;d10
+        </div>
+    </div>
+
+    <div class="derived-stat rectangle rectangle2">
+        <div class="flexrow flex-group-center grid-span-2 derived-stat-text derived-bonus-dice">
+            +&nbsp;
+            <input type="text" name="system.powerDice.spell" value="{{system.powerDice.spell}}"
+                data-dtype="Number" />&nbsp;d10
+        </div>
+        <label for="system.spellPower" class="derived-stat-text">Spell</label>
+        <span class="spell-power-roll clickable derived-stat-span">{{system.spellPower}}</span>
+    </div>
+
+    <div class="derived-stat rectangle rectangle2">
+        <div class="flexrow flex-group-center grid-span-2 derived-stat-text derived-bonus-dice">
+            +&nbsp;
+            <input type="text" name="system.powerDice.init" value="{{system.powerDice.init}}"
+                data-dtype="Number" />&nbsp;d10
+        </div>
+        <span class="initiative-roll clickable derived-stat-span">{{system.init}}</span>
+        <label for="system.init" class="derived-stat-text">Init</label>
+    </div>
+
+    <div class="derived-stat rectangle">
+        <label for="system.phydef" class="derived-stat-text">Phy Def</label>
+        <span class="derived-stat-span">{{system.phydef}}</span>
+    </div>
+
+    <div class="derived-stat rectangle">
+        <span class="derived-stat-span">{{system.magdef}}</span>
+        <label for="system.magdef" class="derived-stat-text">Mag Def</label>
+    </div>
+</div>

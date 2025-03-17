@@ -1,0 +1,32 @@
+.effects .item {
+  .effect-source,
+  .effect-duration,
+  .effect-controls {
+    text-align: center;
+    border-left: 1px solid #c9c7b8;
+    border-right: 1px solid #c9c7b8;
+    font-size: 12px;
+  }
+
+  .effect-controls {
+    border: none;
+  }
+}
+
+.effects {
+
+    input, select {
+        border: 1px solid black;
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+        border-left: none;
+        border-right: none;
+        background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+        color: white;
+        text-shadow: 0 0 4px rgb(59, 59, 255);
+        text-align: center;
+
+        option{
+            background:rgba(0, 4, 65, 0.4);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "id": "smt-200x-kyane-sheet",
+    "title": "SMT 200X/TC Kyane Custom Sheet",
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": "12",
+      "verified": "12"
+    },
+    "relationships": {
+      "systems": [
+        {
+          "id": "smt-200x",
+          "type": "system"
+        }
+      ]
+    },
+    "description": "Adds a custom actor sheet",
+    "authors": [
+      {
+        "name": "Kyane"
+      }
+    ],
+    "manifest": "updatedByRelease",
+    "url": "updatedByRelease",
+    "download": "updatedByRelease",
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json",
+        "flags": {}
+      }
+    ],
+    "flags": {
+      "hotReload": {
+        "extensions": ["css", "hbs", "json"],
+        "paths": ["lang", "css", "templates"]
+      }
+    },
+    "esmodules": ["module/smt-200x-kyane-sheet.mjs"],
+    "styles": ["css/smt-200x-kyane.css"]
+  }

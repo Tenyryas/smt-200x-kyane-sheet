@@ -1,0 +1,89 @@
+.hexagon {
+	z-index: 0;
+	justify-content: left;
+	margin-bottom: 5px;
+	display: flex;
+	width: 450px;
+	height: 40px;
+    border: 1px solid black;
+    border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4));
+}
+
+.stat-span, .stat-text {
+	font-size: 1.5rem;
+	width: 100px;
+	left: 5px;
+	top: -7px;
+	text-align: left;
+	position: relative;
+	align-self: center;
+}
+
+.stat-name {
+	color: white;
+	text-shadow: $c-text-shadow-main 0 0 4px;
+}
+
+.stat-points {
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: max-content;
+	left: 0px;
+	top: 35px;
+	filter: drop-shadow(0px 0px 1px #000);
+}
+
+.stat-point {
+	display: inline-block;
+	margin: 0 -1.5px;
+	width: 8px;
+	height: 12px;
+	aspect-ratio: 1;
+	clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+	background: radial-gradient(#5d6d7e, #273746);
+}
+
+.stat-point-active {
+	background: radial-gradient(#ff8496, #8a172f);
+}
+
+.stat {
+	display: flex;
+	position: relative;
+	filter: drop-shadow(0px 0px 1px #000);
+	justify-self: center;
+}
+
+.stat-number {
+    height: fit-content;
+    width: 60px;
+    text-align: center;
+	z-index: 2;
+	font-size: 32px;
+	position: absolute;
+	left: 80px;
+	top: -5px;
+	font-style: italic;
+	color: white;
+	text-shadow: $c-text-shadow-main 1px 0 4px;
+    border: none;
+    background-color: transparent;
+    padding-right: 5px;
+    overflow: visible;
+}
+
+.stat-number:hover {
+    text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+.stat-percentile {
+	text-align: right;
+	left: -20px;
+	font-style: italic;
+	color: white;
+	text-shadow: $c-text-shadow-main 1px 0 4px;
+}

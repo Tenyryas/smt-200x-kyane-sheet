@@ -1,0 +1,13 @@
+.charname input {
+    max-width: 450px;
+    background: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+    text-shadow: 0 0 5px $c-text-shadow-main;
+}

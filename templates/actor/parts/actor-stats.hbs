@@ -1,0 +1,12 @@
+<div class="stat">
+    <div class="hexagon">
+        <label for="system.stats.{{key}}.value" class="stat-text stat-name clickable {{key}}-roll align-left"
+            data-roll="d100" data-label="{{localize (lookup @root.config.statAbbreviations key)}}">{{localize (lookup @root.config.statAbbreviations key)}}</label>
+    </div>
+    <div class="stat-points {{key}}-gauge">
+        {{#statGauge ability.value}}{{/statGauge}}
+    </div>
+    <input type="text" name="system.stats.{{key}}.value" class="update-stat stat-text stat-number {{key}}-value" value="{{ability.value}}"
+        data-dtype="Number" />
+    <span class="stat-span stat-percentile ability-mod" data-label="{{localize (lookup @root.config.stats key)}}">{{ability.tn}}%</span>
+</div>

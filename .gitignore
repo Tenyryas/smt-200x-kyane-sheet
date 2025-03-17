@@ -1,0 +1,18 @@
+# IDE
+.idea/
+.vs/
+lhtrpg.code-workspace
+
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Foundry
+*.lock
+
+# gulp
+css/
+
+# archiving
+zip.bat
+lhtrpg.zip

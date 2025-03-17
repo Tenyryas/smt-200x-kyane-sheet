@@ -1,0 +1,152 @@
+.resource-label {
+  font-weight: bold;
+}
+
+.resource {
+    width: 200px;
+}
+
+.resource-numbers {
+    width: 150px;
+    position: relative;
+    z-index: 1;
+
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 4px $c-text-shadow-main;
+
+    label {
+        max-width: 30px;
+    }
+
+    span {
+        max-width: 5px;
+        margin-left: 2px;
+        margin-right: 2px;
+        align-self: center;
+    }
+}
+
+.resource-number {
+    max-width: 50px;
+    height: 24px;
+    color: white;
+    text-shadow: 0 0 3px $c-text-shadow-main;
+    background: none;
+    border: none;
+    text-align: right;
+    padding: 0;
+}
+
+.resource-number:hover {
+    text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+span.resource-number{
+    text-align: left;
+    max-width: fit-content;
+    align-self: end;
+}
+
+span.resource-number:hover {
+    text-shadow: none;
+}
+
+.resource-gauge {
+    width: 144px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 1);
+    clip-path: polygon(3% 0, 98% 0, 100% 30%, 100% 30%, 97% 100%, 1% 100%, 0 70%, 0 70%);
+
+    position: relative;
+    top: -7px;
+}
+
+.resource-gauge-graphics {
+    position: relative;
+    top:-5px;
+    border: none;
+    width: 140px;
+    height: 8px;
+    clip-path: polygon(2% 0, 99% 0, 100% 20%, 100% 20%, 97% 100%, 1% 100%, 0 80%, 0 80%);
+}
+
+.resource-gauge-graphics::-webkit-progress-value {
+    background:
+    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
+    linear-gradient(90deg, rgb(172, 116, 13), rgb(255, 229, 171));
+}
+
+.resource-gauge-graphics.rgg-mp::-webkit-progress-value {
+    background:
+    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
+    linear-gradient(90deg, rgb(69, 26, 119), rgb(175, 154, 255));
+}
+
+.resource-gauge-graphics.rgg-fate::-webkit-progress-value {
+    background:
+    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
+    linear-gradient(90deg, rgb(26, 119, 38), rgb(154, 255, 162));
+}
+
+.resource-gauge-graphics::-webkit-progress-bar {
+    background-color: rgba(75, 75, 75, 0.8);
+}
+
+.resource-level {
+    color: white;
+    text-shadow: 0 0 5px $c-text-shadow-main;
+    font-size: 52px;
+
+    label {
+
+    }
+}
+
+.resource-next-lvl {
+    color: white;
+    text-shadow: 0 0 5px $c-text-shadow-main;
+    font-size: 16px;
+}
+
+input[name="system.wepA.ammo"],
+input[name="system.wepA.maxAmmo"],
+input[name="system.wepB.ammo"],
+input[name="system.wepB.maxAmmo"] {
+    width: 30px;
+}
+
+input[name="system.affinityField"],
+select[name="system.badStatus"] {
+    border: 1px solid black;
+    border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+    color: white;
+    text-shadow: 0 0 4px rgb(59, 59, 255);
+
+    option{
+        background: rgba(0, 4, 65, 0.4);
+    }
+}
+
+input[type="checkbox"]:checked, 
+input[type="radio"]:checked {
+    accent-color: rgba(0, 4, 65, 0.4);
+}
+
+.equipped-weapons {
+    gap: 2px;
+    margin: 0;
+
+    input {
+        border: 1px solid black;
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+        border-left: none;
+        border-right: none;
+        background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+        color: white;
+        text-shadow: 0 0 4px rgb(59, 59, 255);
+    }
+}
