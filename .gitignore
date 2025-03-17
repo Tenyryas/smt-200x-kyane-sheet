@@ -1,6 +1,7 @@
 # IDE
 .idea/
 .vs/
+.vscode/
 smt-200x-kyane-sheet.code-workspace
 
 # Node Modules
