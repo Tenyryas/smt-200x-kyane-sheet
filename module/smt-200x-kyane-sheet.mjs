@@ -12,7 +12,7 @@ Hooks.once('init', function () {
     Actors.registerSheet('smt-200x-kyane-sheet', SMTXActorSheetKyane, {
         makeDefault: false,
         label: 'SMT 200x Kyane Custom',
-        types: ["character"]
+        types: ["character", "npc"]
     });
 
     // Preload Handlebars templates.

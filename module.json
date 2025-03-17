@@ -14,15 +14,12 @@
         }
       ]
     },
-    "description": "Adds a custom actor sheet",
+    "description": "Adds a custom actor sheet for Alondaar's SMT 200X/TC system",
     "authors": [
       {
         "name": "Kyane"
       }
     ],
-    "manifest": "updatedByRelease",
-    "url": "updatedByRelease",
-    "download": "updatedByRelease",
     "languages": [
       {
         "lang": "en",
@@ -38,5 +35,8 @@
       }
     },
     "esmodules": ["module/smt-200x-kyane-sheet.mjs"],
-    "styles": ["css/smt-200x-kyane.css"]
+    "styles": ["css/smt-200x-kyane.css"],
+    "url": "https://github.com/Tenyryas/smt-200x-kyane-sheet",
+    "manifest": "https://raw.githubusercontent.com/Tenyryas/smt-200x-kyane-sheet/latest/system.json",
+    "download": "https://github.com/Tenyryas/smt-200x-kyane-sheet/releases/download/v1.0.0/smt-200x-kyane-sheet.zip"
   }

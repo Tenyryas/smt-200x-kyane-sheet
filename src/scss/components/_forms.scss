@@ -29,7 +29,13 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
+  color:white;
+  text-shadow: 0 0 4px $c-text-shadow-main;
 
+  label[for="system.isCursed"]{
+    color: darkred;
+    text-shadow: 0 0 2px $c-tan;
+}
   .header-fields {
     flex: 1;
     gap: 2px;
@@ -66,6 +72,10 @@
     margin: 5px;
 }
 
+.sheet-body-npc {
+    height: 340px;
+}
+
 .sheet-body .tab,
 .sheet-body .tab .editor {
     height: 100%;
@@ -74,6 +84,10 @@
 
 .sheet-tabs-container {
     height: 516px;
+}
+
+.sheet-tabs-container-npc {
+    height: 380px;
 }
 
 
@@ -109,3 +123,17 @@
         text-shadow: 0 0 4px rgb(59, 59, 255);
     }
 }
+
+.npc-biography {
+    margin-top: 5px;
+    min-height: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+    color: white;
+    text-shadow: 0 0 4px rgb(59, 59, 255);
+}
+

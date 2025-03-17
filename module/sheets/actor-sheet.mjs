@@ -23,7 +23,7 @@ export class SMTXActorSheetKyane extends SMTXActorSheet {
 
     /** @override */
     get template() {
-        return `modules/smt-200x-kyane-sheet/templates/actor/actor-character-sheet.hbs`;
+        return `modules/smt-200x-kyane-sheet/templates/actor/actor-${this.actor.type}-sheet.hbs`;
     }
 
 

@@ -98,6 +98,19 @@ span.resource-number:hover {
     text-shadow: 0 0 5px $c-text-shadow-main;
     font-size: 52px;
 
+    input {
+        background: none;
+        height: 52px;
+        color: white;
+        text-shadow: 0 0 5px $c-text-shadow-main;
+        border: none;
+        width: 70px;
+    }
+
+    input:hover {
+        text-shadow: 0 0 5px var(--color-shadow-primary);
+    }
+
     label {
 
     }
@@ -107,6 +120,24 @@ span.resource-number:hover {
     color: white;
     text-shadow: 0 0 5px $c-text-shadow-main;
     font-size: 16px;
+
+    input {
+        background: none;
+        color: white;
+        border: none;
+        width: 150px;
+        border: 1px solid black;
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+        border-left: none;
+        border-right: none;
+        background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+        color: white;
+        text-shadow: 0 0 4px $c-text-shadow-main;
+    }
+
+    input:hover {
+        text-shadow: 0 0 5px var(--color-shadow-primary);
+    }
 }
 
 input[name="system.wepA.ammo"],
@@ -146,6 +177,27 @@ input[type="radio"]:checked {
         border-left: none;
         border-right: none;
         background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+        color: white;
+        text-shadow: 0 0 4px rgb(59, 59, 255);
+    }
+}
+
+.npc-info {
+    gap: 4px;
+    margin: 0;
+
+    label {
+        min-width: 100px;
+        text-align: left;
+    }
+
+    input {
+        max-width: 200px;
+        border: 1px solid black;
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
+        border-left: none;
+        border-right: none;
+        background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4));
         color: white;
         text-shadow: 0 0 4px rgb(59, 59, 255);
     }

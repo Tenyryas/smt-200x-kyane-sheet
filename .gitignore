@@ -1,7 +1,7 @@
 # IDE
 .idea/
 .vs/
-lhtrpg.code-workspace
+smt-200x-kyane-sheet.code-workspace
 
 # Node Modules
 node_modules/
@@ -15,4 +15,4 @@ css/
 
 # archiving
 zip.bat
-lhtrpg.zip
+smt-200x-kyane-sheet.zip

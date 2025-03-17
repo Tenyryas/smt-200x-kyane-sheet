@@ -8,6 +8,8 @@ export const preloadHandlebarsTemplates = async function () {
     // Actor partials.
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-features.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/npc-features.hbs',
+    'modules/smt-200x-kyane-sheet/templates/actor/parts/npc-options.hbs',
+    'modules/smt-200x-kyane-sheet/templates/actor/parts/npc-level.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-passives.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-armor.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-weapons.hbs',
