@@ -8,7 +8,7 @@
 
         <div class="abilities flexcol sidebar-separation">
             {{#each system.stats as |ability key|}}
-                {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs" key=key ability=ability}}
+                {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs" key=key ability=ability fStat=../system.favoredStat}}
             {{/each}}
         </div>
 

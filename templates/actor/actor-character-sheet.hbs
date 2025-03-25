@@ -8,7 +8,7 @@
 
         <div class="abilities flexcol sidebar-separation">
             {{#each system.stats as |ability key|}}
-                {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs" key=key ability=ability}}
+                {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs" key=key ability=ability fStat=../system.favoredStat}}
             {{/each}}
         </div>
 
@@ -272,125 +272,72 @@
 
 
 
+
+
+
                 {{!-- Active Effects Tab --}}
-                <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-                    {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-buffs.hbs"}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+            <section class="main">
+                {{> "systems/smt-200x/templates/actor/parts/actor-effects.hbs"}}
+            </section>
 
-                    <hr>
+            <hr>
 
-                    <section class="main">
-                        {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/actor-effects.hbs"}}
-                    </section>
-                    <hr>
-                    <section class="main">
-                        <div class="flexcol">
-                            <label for="system.phydefFormula" class="resource-label">Physical Defense Formula</label>
-                            <input style="font-size: 10pt; font-style: italic;"
-                                value="Demons: + @system.attributes.level    --    Tokyo Conception: floor((@system.stats.vt.value + @system.attributes.level)/2)"
-                                disabled />
-                            <input type="text" name="system.phydefFormula" value="{{system.phydefFormula}}" />
-                        </div>
+            <section class="main">
+                <div class="grid grid-5col">
+                    <div class="flexcol">
+                        <label for="system.hp.mult" class="resource-label">HP Multiplier</label>
+                        <input type="text" name="system.hp.mult" value="{{system.hp.mult}}" data-dtype="Number" />
+                    </div>
 
-                        <div class="flexcol">
-                            <label for="system.magdefFormula" class="resource-label">Magical Defense Formula</label>
-                            <input style="font-size: 10pt; font-style: italic;"
-                                value="Demons: + @system.attributes.level    --    Tokyo Conception: floor((@system.stats.mg.value + @system.attributes.level)/2)"
-                                disabled />
-                            <input type="text" name="system.magdefFormula" value="{{system.magdefFormula}}" />
-                        </div>
+                    <div class="flexcol">
+                        <label for="system.mp.mult" class="resource-label">MP Multiplier</label>
+                        <input type="text" name="system.mp.mult" value="{{system.mp.mult}}" data-dtype="Number" />
+                    </div>
 
-                        <div class="flexcol">
-                            <label for="system.initFormula" class="resource-label">Initiative Formula</label>
-                            <input style="font-size: 10pt; font-style: italic;"
-                                value="Tokyo Conception: @system.stats.ag.value" disabled />
-                            <input type="text" name="system.initFormula" value="{{system.initFormula}}" />
-                        </div>
-                    </section>
+                    <div class="flexcol">
+                        <label for="system.human" class="resource-label"
+                            title="Uses the 'Human' Phy/Mag Defense Formulas from the settings menu.">Human</label>
+                        <input type="checkbox" name="system.human" {{#if system.human}}checked{{/if}} />
+                    </div>
 
-                    <hr>
+                    <div class="flexcol">
+                        <label class="resource-label"
+                            title="Tokyo Conception Demon Favored Stat (marks an asterisk by a stat for randomized level-up stats)">Favored
+                            Stat</label>
+                        <select name="system.favoredStat">
+                            <option value="none">None</option>
+                            {{selectOptions @root.config.stats selected=system.favoredStat localize=true}}
+                        </select>
+                    </div>
 
-                    <section class="main">
-                        <div class="grid grid-5col">
-                            <div class="flexcol">
-                                <label for="system.hp.mult" class="resource-label">HP Multiplier</label>
-                                <input type="text" name="system.hp.mult" value="{{system.hp.mult}}"
-                                    data-dtype="Number" />
-                            </div>
+                    <div class="flexcol">
+                        <label for="system.unarmed.hit" class="resource-label">Unarmed Hit</label>
+                        <input type="text" name="system.unarmed.hit" value="{{system.unarmed.hit}}"
+                            data-dtype="Number" />
+                    </div>
 
-                            <div class="flexcol">
-                                <label for="system.mp.mult" class="resource-label">MP Multiplier</label>
-                                <input type="text" name="system.mp.mult" value="{{system.mp.mult}}"
-                                    data-dtype="Number" />
-                            </div>
+                    <div class="flexcol">
+                        <label for="system.unarmed.power" class="resource-label">Unarmed Power</label>
+                        <input type="text" name="system.unarmed.power" value="{{system.unarmed.power}}"
+                            data-dtype="Number" />
+                    </div>
 
-                            <div class="flexcol">
-                                <label for="system.unarmed.hit" class="resource-label">Unarmed Hit</label>
-                                <input type="text" name="system.unarmed.hit" value="{{system.unarmed.hit}}"
-                                    data-dtype="Number" />
-                            </div>
+                    <div class="flexcol">
+                        <label for="system.powerDice.item" class="resource-label">Item Power Dice</label>
+                        <input type="text" name="system.powerDice.item" value="{{system.powerDice.item}}"
+                            data-dtype="Number" />
+                    </div>
+            </section>
 
-                            <div class="flexcol">
-                                <label for="system.unarmed.power" class="resource-label">Unarmed Power</label>
-                                <input type="text" name="system.unarmed.power" value="{{system.unarmed.power}}"
-                                    data-dtype="Number" />
-                            </div>
 
-                            <div class="flexcol">
-                                <label for="system.powerDice.item" class="resource-label">Item Power Dice</label>
-                                <input type="text" name="system.powerDice.item" value="{{system.powerDice.item}}"
-                                    data-dtype="Number" />
-                            </div>
+            <br><br>
+            <section class="main">
+                {{> "modules/smt-200x-kyane-sheet/templates/part-affinity-bs-selectors.hbs"}}
+            </section>
+        </div>
 
-                            <div class="flexcol grid-span-2">
-                                <label for="system.aux.showTCheaders" class="resource-label">Set TC formulas</label>
-                                <button class="set-tc-formulas"
-                                    style="padding: 10px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Set
-                                    TC Formulas</button>
-                            </div>
 
-                            <div class="flexcol">
-                                <label for="system.aux.showTCheaders" class="resource-label">Set Base X Human</label>
-                                <button class="set-x-human"
-                                    style="padding: 10px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Set
-                                    X Human</button>
-                            </div>
-
-                            <div class="flexcol">
-                                <label for="system.aux.showTCheaders" class="resource-label">Set Base X Demon</label>
-                                <button class="set-x-demon"
-                                    style="padding: 10px 15px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Set
-                                    X Demon</button>
-                            </div>
-                    </section>
-
-                    <hr>
-
-                    <section class="main">
-                        <div class="flexrow">
-                            {{#each system.affinity as |aff key|}}
-                                <div class="flexcol">
-                                    <label for="system.affinity.{{key}}" class="resource-label align-center">{{localize
-              (lookup @root.config.affinities key)}}</label>
-                                    <select name="system.affinity.{{key}}">
-                                        {{selectOptions @root.config.charAffinity selected=aff localize=true}}
-                                    </select>
-                                </div>
-                            {{/each}}
-                        </div>
-                        <div class="flexrow">
-                            {{#each system.affinityBS as |aff key|}}
-                                <div class="flexcol">
-                                    <label for="system.affinityBS.{{key}}"
-                                        class="resource-label align-center">{{localize
-              (lookup @root.config.badStatusList key)}}</label>
-                                    <select name="system.affinityBS.{{key}}">
-                                        {{selectOptions @root.config.charAffinity selected=aff localize=true}}
-                                    </select>
-                                </div>
-                            {{/each}}
-                        </div>
-                    </section>
-                </div>
             </section>
         </div>
     </div>

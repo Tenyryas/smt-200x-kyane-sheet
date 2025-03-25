@@ -16,10 +16,10 @@ export const preloadHandlebarsTemplates = async function () {
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-items.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-consumables.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-spells.hbs',
-    'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-buffs.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-effects.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-sidebar-derived-stats.hbs',
-    'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-level.hbs'
+    'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-level.hbs',
+    'modules/smt-200x-kyane-sheet/templates/part-affinity-bs-selectors.hbs'
   ]);
 };
