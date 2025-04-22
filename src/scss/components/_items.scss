@@ -72,7 +72,8 @@
     align-items: center;
     padding: 0 2px; // to align with the header border
     border-bottom: none;
-    &:last-child { border-bottom: none; }
+    text-shadow: 0 0 4px rgb(59, 59, 255);
+    &:last-child { border-bottom: 1px solid black}
     .item-name {
       color: white;
       text-shadow: 0 0 3px $c-text-shadow-main;
@@ -93,7 +94,7 @@
     font-size: 12px;
   }
 
-  .item-shortEffect{
+  .item-details, .item-shortEffect{
     text-align:left; 
     padding:4px;
     border: none;
