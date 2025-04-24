@@ -10,10 +10,13 @@
 }
 
 .affinities {
+    display: grid;
+    align-content: center;
     overflow: hidden;
     text-wrap: nowrap;
     text-align: center;
     max-width: 530px;
+    height: 20px;
 
     border: 1px solid black;
     border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
@@ -211,6 +214,7 @@ input[type="radio"]:checked {
     margin: 0;
 
     input {
+        height: 21px;
         border: 1px solid black;
         border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
         border-left: none;
@@ -226,11 +230,14 @@ input[type="radio"]:checked {
     margin: 0;
 
     label {
-        min-width: 100px;
-        text-align: left;
+        display: inline-block;
+        width: 70px;
+        font-size: 13px;
+        text-align: center;
     }
 
     input {
+        height: 20px;
         max-width: 200px;
         border: 1px solid black;
         border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
@@ -239,6 +246,11 @@ input[type="radio"]:checked {
         background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4));
         color: white;
         text-shadow: 0 0 4px rgb(59, 59, 255);
+    }
+
+    input:disabled {
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
+        background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4));
     }
 }
 

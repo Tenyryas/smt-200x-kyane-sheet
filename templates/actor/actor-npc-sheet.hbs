@@ -83,16 +83,33 @@
                 </div>
             </div>
 
-            <div class="grid grid-8col" style="flex-basis: 100%;">
-                <div class="flexcol grid-span-3">
-                    <div class="flexcol flex-group-center grid-span-3">
-                        <label class="resource-label flex0">Affinities</label>
-                        <div class='flexrow'>
-                            <input type="text" name="system.affinityField" value="{{system.affinityField}}" />
+            <div class="grid grid-8col">
+
+                <div class="grid-span-3">
+                    <div class="flex-group-center grid-span-3 equipped-weapons">
+                        <label for="system.fuseID" class="resource-label affinities-label">Fuse ID</label>
+                        <div>
+                            <div>
+                                <input type="text" name="system.fuseID" value="{{system.fuseID}}" />
+                            </div>
                         </div>
                     </div>
-                    <div class="flexrow">
+                </div>
 
+
+                <div class="grid-span-5 flex-group-center">
+                    <label class="resource-label affinities-label">Affinities:</label>
+                    <div class='affinities'>
+                        <div>
+                            {{system.displayAffinity}} {{#if system.displayAffinityBS}} /
+                                {{system.displayAffinityBS}}{{/if}}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-span-3">
+                    <div class="flexrow align-content-center">
                         <div class="flexcol flex-group-center">
                             <label for="system.badStatus" class="resource-label align-right">Current
                                 BS</label>
@@ -107,69 +124,69 @@
                     </div>
                 </div>
 
-
-                <div class='grid grid-5col flex-group-center equipped-weapons'>
-                    <div class="grid-span-5 flex-group-center">
-                        <label for="system.fuseID" class="resource-label">Fuse ID</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                            <input type="text" name="system.fuseID" value="{{system.fuseID}}" />
-                        </div>
-                        <textarea class="npc-biography" name="system.biography" rows="5" cols="40">{{system.biography}}</textarea>
-                    </div>
+                <div class="grid-span-5">
+                    <textarea class="npc-biography" name="system.biography" rows="5"
+                        cols="40">{{system.biography}}</textarea>
                 </div>
 
+
                 <div class="grid grid-8col npc-info">
-                    <div class="flexcol flex-between grid-span-8">
-                        <div class="flexrow">
-                            <label for="system.alignment" class="resource-label">&nbsp;Alignment&nbsp;</label>
-                            <input type="text" name="system.alignment" class="flex2" value="{{system.alignment}}" />
+                    <div class="grid-span-4">
+                        <label for="system.alignment" class="resource-label">&nbsp;Alignment&nbsp;</label>
+                        <input type="text" name="system.alignment" value="{{system.alignment}}" />
 
-                            {{#if system.aux.showTCheaders}}
-                                <label for="system.tone" class="resource-label">&nbsp;Behavior&nbsp;</label>
-                            {{else}}
-                                <label for="system.tone" class="resource-label">&nbsp;Tone&nbsp;</label>
-                            {{/if}}
-                            <input type="text" name="system.tone" class="flex2" value="{{system.tone}}" />
-                        </div>
-
-                        <div class="flexrow">
-                            {{#if system.aux.showTCheaders}}
-                                <label for="system.keywords" class="resource-label">&nbsp;Evolve?&nbsp;</label>
-                            {{else}}
-                                <label for="system.keywords" class="resource-label">&nbsp;Keywords&nbsp;</label>
-                            {{/if}}
-                            <input type="text" name="system.keywords" class="flex2" value="{{system.keywords}}" />
-
-
-                            {{#if system.aux.showTCheaders}}
-                                <label for="system.ngWords" class="resource-label">&nbsp;Inherits&nbsp;</label>
-                            {{else}}
-                                <label for="system.ngWords" class="resource-label">&nbsp;NG Words&nbsp;</label>
-                            {{/if}}
-                            <input type="text" name="system.ngWords" class="flex2" value="{{system.ngWords}}" />
-                        </div>
                     </div>
 
-                    <div class="flexcol flex-between grid-span-8">
-                        <div class="flexrow flex-between">
-                            <label for="system.loot" class="resource-label flex0">&nbsp;Loot&nbsp;</label>
-                            <input type="text" name="system.loot" class="flex2" value="{{system.loot}}" />
-
-                            <label for="system.attributes.exp.tierOne"
-                                class="resource-label flex0">&nbsp;EXP&nbsp;</label>
-                            <input type="text" name="system.attributes.exp.tierOne" class="flex1"
-                                value="{{system.attributes.exp.tierOne}}" {{#if system.autoEXP}}disabled{{/if}} />
-                        </div>
-
-                        <div class="flexrow flex-between">
-                            <label for="system.rare" class="resource-label flex0">&nbsp;Rare&nbsp;</label>
-                            <input type="text" name="system.rare" class="flex2" value="{{system.rare}}" />
-
-                            <label for="system.macca" class="resource-label flex0">&nbsp;Macca&nbsp;</label>
-                            <input type="text" name="system.macca" class="flex1" value="{{system.macca}}" {{#if
-            system.autoEXP}}disabled{{/if}} />
-                        </div>
+                    <div class="grid-span-4">
+                        {{#if system.aux.showTCheaders}}
+                            <label for="system.tone" class="resource-label">&nbsp;Behavior&nbsp;</label>
+                        {{else}}
+                            <label for="system.tone" class="resource-label">&nbsp;Tone&nbsp;</label>
+                        {{/if}}
+                        <input type="text" name="system.tone" value="{{system.tone}}" />
                     </div>
+
+                    <div class="grid-span-4">
+                        {{#if system.aux.showTCheaders}}
+                            <label for="system.keywords" class="resource-label">&nbsp;Evolve?&nbsp;</label>
+                        {{else}}
+                            <label for="system.keywords" class="resource-label">&nbsp;Keywords&nbsp;</label>
+                        {{/if}}
+                        <input type="text" name="system.keywords" value="{{system.keywords}}" />
+                    </div>
+
+                    <div class="grid-span-4">
+                        {{#if system.aux.showTCheaders}}
+                            <label for="system.ngWords" class="resource-label">&nbsp;Inherits&nbsp;</label>
+                        {{else}}
+                            <label for="system.ngWords" class="resource-label">&nbsp;NG Words&nbsp;</label>
+                        {{/if}}
+                        <input type="text" name="system.ngWords" value="{{system.ngWords}}" />
+                    </div>
+
+                    <div class="grid-span-4">
+                        <label for="system.loot" class="resource-label">&nbsp;Loot&nbsp;</label>
+                        <input type="text" name="system.loot" value="{{system.loot}}" />
+                    </div>
+
+                    <div class="grid-span-4">
+                        <label for="system.attributes.exp.tierOne" class="resource-label">&nbsp;EXP&nbsp;</label>
+                        <input type="text" name="system.attributes.exp.tierOne"
+                            value="{{system.attributes.exp.tierOne}}" {{#if system.autoEXP}}disabled{{/if}} />
+                    </div>
+
+
+                    <div class="grid-span-4">
+                        <label for="system.rare" class="resource-label">&nbsp;Rare&nbsp;</label>
+                        <input type="text" name="system.rare" value="{{system.rare}}" />
+                    </div>
+
+                    <div class="grid-span-4">
+                        <label for="system.macca" class="resource-label">&nbsp;Macca&nbsp;</label>
+                        <input type="text" name="system.macca" value="{{system.macca}}"
+                            {{#if system.autoEXP}}disabled{{/if}} />
+                    </div>
+
                 </div>
 
             </div>
@@ -180,7 +197,7 @@
             {{!-- Sheet Tab Navigation --}}
             <nav class="sheet-tabs tabs" data-group="primary">
                 {{!-- Default tab is specified in actor-sheet.mjs --}}
-                <a class="item" data-tab="features">Features</a>
+                <a class="item" data-tab="features">Actions</a>
                 <a class="item" data-tab="effects">Options</a>
             </nav>
 
@@ -188,6 +205,22 @@
             <section class="sheet-body sheet-body-npc">
                 {{!-- Owned Features Tab --}}
                 <div class="tab features" data-group="primary" data-tab="features">
+
+                    <section class="main tn-custom-proll">
+                        <div class="grid grid-4col" style="margin: 0;">
+                            <div class="flexrow flex-center flex-between align-center">
+                                <i title="Toggles resetting this field to 0% after rolling a TN check."
+                                    class="fa-solid clickable {{#if system.resetModTN}}fa-arrows-spin{{else}}fa-xmark{{/if}} toggle-resetModTN"
+                                    style="margin: auto;"></i>
+                                <span class="flex2" style="margin: auto;">TN Mod:</span>
+                                <i class="fa-solid clickable fa-minus decrease-quickModTN" style="margin: auto;"></i>
+                                <input type="text" name="system.quickModTN" value="{{system.quickModTN}}%"
+                                    data-dtype="Number" disabled />
+                                <i class="fa-solid clickable fa-plus increase-quickModTN" style="margin: auto;"></i>
+                            </div>
+                        </div>
+                    </section>
+
                     <section class="main">
                         {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/npc-features.hbs"}}
                     </section>
