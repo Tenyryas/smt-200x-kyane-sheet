@@ -228,6 +228,7 @@ input[type="radio"]:checked {
 .npc-info {
     gap: 4px;
     margin: 0;
+    width: 90%;
 
     label {
         display: inline-block;
@@ -238,7 +239,7 @@ input[type="radio"]:checked {
 
     input {
         height: 20px;
-        max-width: 200px;
+        max-width: 150px;
         border: 1px solid black;
         border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
         border-left: none;
@@ -251,6 +252,11 @@ input[type="radio"]:checked {
     input:disabled {
         border-image: linear-gradient(to left, transparent, rgb(133, 133, 255)) 1;
         background: linear-gradient(-90deg, transparent, rgba(0, 4, 65, 0.4));
+    }
+
+    input[name="system.fuseID"] {
+        border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
+        background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
     }
 }
 
