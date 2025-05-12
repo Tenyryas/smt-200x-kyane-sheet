@@ -20,6 +20,7 @@ export const preloadHandlebarsTemplates = async function () {
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-stats.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-sidebar-derived-stats.hbs',
     'modules/smt-200x-kyane-sheet/templates/actor/parts/actor-level.hbs',
-    'modules/smt-200x-kyane-sheet/templates/part-affinity-bs-selectors.hbs'
+    'modules/smt-200x-kyane-sheet/templates/actor/parts/part-affinity-bs-selectors.hbs',
+    'modules/smt-200x-kyane-sheet/templates/actor/parts/part-quick-status.hbs'
   ]);
 };

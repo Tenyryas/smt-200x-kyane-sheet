@@ -99,8 +99,8 @@
 
                 <div class="grid-span-5 flex-group-center">
                     <label class="resource-label affinities-label">Affinities:</label>
-                    <div class='affinities'>
-                        <div>
+                    <div class='affinities' id="affinities-npc">
+                        <div id="affinities-text-npc">
                             {{system.displayAffinity}} {{#if system.displayAffinityBS}} /
                                 {{system.displayAffinityBS}}{{/if}}
                         </div>
@@ -114,7 +114,7 @@
                 </div>
 
 
-                <div class="grid grid-8col">
+                <div class="grid grid-8col npc-info-details">
                     <div class="grid-span-4">
                         <label for="system.alignment" class="resource-label">&nbsp;Alignment&nbsp;</label>
                         <input type="text" name="system.alignment" value="{{system.alignment}}" />
@@ -203,17 +203,7 @@
                                 <i class="fa-solid clickable fa-plus increase-quickModTN" style="margin: auto;"></i>
                             </div>
 
-                            <ol class="item-list quick-status-list quick-status-list-npc">
-                                {{#each effects as |section sid|}}
-                                    {{#each section.effects as |effect|}}
-                                        <li class="item effect flexrow" data-effect-id="{{effect.id}}"
-                                            data-parent-id="{{effect.parent.id}}">
-                                            <img title="{{effect.name}}" class="item-image quick-status"
-                                                src="{{effect.icon}}" />
-                                        </li>
-                                    {{/each}}
-                                {{/each}}
-                            </ol>
+                            {{> "modules/smt-200x-kyane-sheet/templates/actor/parts/part-quick-status.hbs"}}
                         </div>
                     </section>
 

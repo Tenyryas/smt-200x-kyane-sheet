@@ -89,5 +89,36 @@ export class SMTXActorSheetKyane extends SMTXActorSheet {
             
         });
 
+        const aff_pc = $("#affinities") ?? 0;
+        const aff_t_pc = $("#affinities-text") ?? 0;
+
+        if (aff_t_pc.length) {
+            if (aff_t_pc.outerWidth(true) >= 530) {
+                aff_t_pc.addClass("longaffinities"); 
+                aff_pc.css("justify-content", "left");
+                aff_t_pc.css("animation-duration", `${aff_t_pc.outerWidth(true)/100}s`);
+            }
+            else {
+                aff_t_pc.removeClass("longaffinities");
+                aff_pc.css("justify-content", "center");
+            }
+        }
+
+        const aff_npc = $("#affinities-npc") ?? 0;
+        const aff_t_npc = $("#affinities-text-npc") ?? 0;
+
+        if (aff_t_npc.length) {
+            if (aff_t_npc.outerWidth(true) >= 347) {
+                aff_t_npc.addClass("longaffinities");
+                aff_npc.css("justify-content", "left");
+                aff_t_npc.css("animation-duration", `${aff_t_npc.outerWidth(true)/100}s`);
+                
+                    }
+            else {
+                aff_t_npc.removeClass("longaffinities");
+                aff_npc.css("justify-content", "center");
+            }
+        }
+
     }
 }

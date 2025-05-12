@@ -1,0 +1,20 @@
+<ol class="item-list quick-status-list">
+  {{#each effects.temporary.effects as |effect|}}
+  <li class="item effect flexrow" data-effect-id="{{effect.id}}" data-parent-id="{{effect.parent.id}}">
+    <img title="{{effect.name}}" class="item-image quick-status effect-control" {{#ifEq
+      effect.sourceName "None" }} data-action="delete" {{else}} data-action="toggle" {{/ifEq}}
+      style="margin-right: 2px;" src="{{effect.icon}}" />
+  </li>
+  {{/each}}
+  {{#if effects.inactive.effects}}
+  <span style="margin-left: 4px; margin-right: 4px; font-weight: bold; font-size: 1.50em; align-self: center;">|</span>
+  {{/if}}
+  {{#each effects.inactive.effects as |effect|}}
+  {{#if effect.isTemporary}}
+  <li class="item effect flexrow" data-effect-id="{{effect.id}}" data-parent-id="{{effect.parent.id}}">
+    <img title="{{effect.name}}" class="item-image quick-status effect-control" data-action="toggle"
+      style="filter: grayscale(1); margin-right: 2px;" src="{{effect.icon}}" />
+  </li>
+  {{/if}}
+  {{/each}}
+</ol>

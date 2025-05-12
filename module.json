@@ -1,7 +1,7 @@
 {
     "id": "smt-200x-kyane-sheet",
     "title": "SMT 200X/TC Kyane Custom Sheet",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "compatibility": {
       "minimum": "12",
       "verified": "12"
@@ -42,5 +42,5 @@
     "styles": ["css/smt-200x-kyane.css"],
     "url": "https://github.com/Tenyryas/smt-200x-kyane-sheet",
     "manifest": "https://raw.githubusercontent.com/Tenyryas/smt-200x-kyane-sheet/latest/module.json",
-    "download": "https://github.com/Tenyryas/smt-200x-kyane-sheet/releases/download/v1.2.1/smt-200x-kyane-sheet.zip"
+    "download": "https://github.com/Tenyryas/smt-200x-kyane-sheet/releases/download/v1.2.2/smt-200x-kyane-sheet.zip"
   }

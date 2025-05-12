@@ -1,7 +1,7 @@
 .resource-label {
-  font-weight: bold;
-  text-shadow: 0 0 4px rgb(59, 59, 255);
-  color: white;
+    font-weight: bold;
+    text-shadow: 0 0 4px rgb(59, 59, 255);
+    color: white;
 }
 
 .affinities-label {
@@ -14,7 +14,8 @@
     align-content: center;
     overflow: hidden;
     text-wrap: nowrap;
-    text-align: center;
+    text-align: left;
+    justify-content: center;
     max-width: 530px;
     height: 20px;
 
@@ -27,20 +28,33 @@
     text-shadow: 0 0 4px rgb(59, 59, 255);
 
     div {
-        animation: affinities-animation 20s linear infinite;
+        //animation: affinities-animation 20s linear infinite;
+        text-align: left;
+        width: min-content;
+    }
+
+    .longaffinities {
+        animation-name: affinities-animation;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
 }
 
 @keyframes affinities-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
+    0% {
+        transform: translateX(0%);
     }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
+
+    15% {
+        transform: translateX(0%);
+    }
+
+    90% {
+        transform: translateX(-75%);
+    }
+
+    100% {
+        transform: translateX(-75%);
     }
 }
 
@@ -84,7 +98,7 @@
     text-shadow: 0 0 5px var(--color-shadow-primary);
 }
 
-span.resource-number{
+span.resource-number {
     text-align: left;
     max-width: fit-content;
     align-self: end;
@@ -106,7 +120,7 @@ span.resource-number:hover {
 
 .resource-gauge-graphics {
     position: relative;
-    top:-5px;
+    top: -5px;
     border: none;
     width: 140px;
     height: 8px;
@@ -115,20 +129,20 @@ span.resource-number:hover {
 
 .resource-gauge-graphics::-webkit-progress-value {
     background:
-    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
-    linear-gradient(90deg, rgb(172, 116, 13), rgb(255, 229, 171));
+        linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%),
+        linear-gradient(90deg, rgb(172, 116, 13), rgb(255, 229, 171));
 }
 
 .resource-gauge-graphics.rgg-mp::-webkit-progress-value {
     background:
-    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
-    linear-gradient(90deg, rgb(69, 26, 119), rgb(175, 154, 255));
+        linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%),
+        linear-gradient(90deg, rgb(69, 26, 119), rgb(175, 154, 255));
 }
 
 .resource-gauge-graphics.rgg-fate::-webkit-progress-value {
     background:
-    linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%), 
-    linear-gradient(90deg, rgb(26, 119, 38), rgb(154, 255, 162));
+        linear-gradient(rgba(255, 255, 255, 0.1) 45%, rgba(0, 0, 0, 0.5) 70%),
+        linear-gradient(90deg, rgb(26, 119, 38), rgb(154, 255, 162));
 }
 
 .resource-gauge-graphics::-webkit-progress-bar {
@@ -153,9 +167,7 @@ span.resource-number:hover {
         text-shadow: 0 0 5px var(--color-shadow-primary);
     }
 
-    label {
-
-    }
+    label {}
 }
 
 .resource-next-lvl {
@@ -199,12 +211,12 @@ select[name="system.badStatus"] {
     color: white;
     text-shadow: 0 0 4px rgb(59, 59, 255);
 
-    option{
+    option {
         background: rgba(0, 4, 65, 0.4);
     }
 }
 
-input[type="checkbox"]:checked, 
+input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     accent-color: rgba(0, 4, 65, 0.4);
 }
@@ -257,6 +269,10 @@ input[type="radio"]:checked {
     input[name="system.fuseID"] {
         border-image: linear-gradient(to left, transparent, rgb(133, 133, 255), transparent) 1;
         background: linear-gradient(90deg, transparent, rgba(0, 4, 65, 0.4), transparent);
+    }
+
+    .npc-info-details {
+        gap: 2px;
     }
 }
 
